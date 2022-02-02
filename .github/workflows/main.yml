@@ -24,6 +24,11 @@ jobs:
         run: mvn clean verify
         working-directory: java/simple-api
 
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secret.DOCKERHUB_USERNAME }}
+          password: ${{ secret.DOCKERHUB_PASSWORD }}
 
 build-and-push-docker-image:
   needs: test-backend
@@ -36,12 +41,17 @@ build-and-push-docker-image:
     - name: Build image and push backend
       uses: docker/build-push-action@v2
     with:
-      # relative path to the place where source code with
-      Dockerfile is located
+      # relative path to the place where source code with Dockerfile is located
       context: ./java/simple-api
       # Note: tags has to be all lower-case
       tags:
-${{secrets.DOCKERHUB_USERNAME}}/tp-devops-cpe:simple-api
+${{secrets.DOCKERHUB_USERNAME}}/backend:1
     
     - name: Build image and push database
-      # DO the same for database
+    with:
+    # relative path to the place where source code with Dockerfile is located
+    context: ./java/simple-api
+    # Note: tags has to be all lower-case
+    tags:
+${{secrets.DOCKERHUB_USERNAME}}/database:1
+    
