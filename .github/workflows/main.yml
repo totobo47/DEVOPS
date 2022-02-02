@@ -21,7 +21,7 @@ jobs:
           java-version: '11'
       #finally build your app with the latest command
       - name: Build and test with Maven
-        run: mvn -B verify sonar:sonar -Dsonar.projectKey=devops-2022 -Dsonar.organization=devops-cpe -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=totobo47_DEVOPS -Dsonar.organization=devops-cpe -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         working-directory: java/simple-api
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
