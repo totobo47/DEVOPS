@@ -21,5 +21,7 @@ jobs:
           java-version: '11'
       #finally build your app with the latest command
       - name: Build and test with Maven
-        run: echo "---------------------------> coucou" && pwd 
+        run: mvn clean verify
         working-directory: java/simple-api
+
+
