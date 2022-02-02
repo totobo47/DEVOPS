@@ -2,7 +2,7 @@ version: '3.3'
 services:
   backend:
     container_name: backend
-    build: ./java/api-bdd/simple-api-main/simple-api
+    build: ./java/api-bdd/simple-api
     networks:
       - app1-network
     ports:
