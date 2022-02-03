@@ -35,7 +35,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-  build-and-push-docker-image:
+  build-and-push-docker-image-backend:
     needs: test-backend
     # run only when code is compiling and tests are passing
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USERNAME}}/backend
           push: ${{ github.ref == 'refs/heads/main' }}
 
-  build-and-push-docker-image:
+  build-and-push-docker-image-http:
     needs: test-backend
     # run only when code is compiling and tests are passing
     runs-on: ubuntu-latest
@@ -76,7 +76,7 @@ jobs:
 
 
 
-  build-and-push-docker-image:
+  build-and-push-docker-image-database:
     needs: test-backend
     # run only when code is compiling and tests are passing
     runs-on: ubuntu-latest
@@ -98,7 +98,7 @@ jobs:
 
       
 
-  build-and-push-docker-image:
+  build-and-push-docker-image-frontend:
     needs: test-backend
     # run only when code is compiling and tests are passing
     runs-on: ubuntu-latest

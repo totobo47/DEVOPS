@@ -1485,11 +1485,11 @@
             "folder": "file:///home/totobo/Documents/DEVOPS",
             "backupPath": "/home/totobo/Documents/DEVOPS/ansible/Backups/a4fe70f1c6f8051f7f07f41ae2ff0ffb",
             "uiState": {
-                "mode": 1,
-                "x": 72,
-                "y": 64,
-                "width": 1848,
-                "height": 1016
+                "mode": 0,
+                "x": -448,
+                "y": 417,
+                "width": 1024,
+                "height": 768
             }
         },
         "openedWindows": []
