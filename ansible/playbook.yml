@@ -6,6 +6,7 @@
     - database
     - app
     - proxy
+		- frontend
   gather_facts: false
   become: yes
   tasks:
