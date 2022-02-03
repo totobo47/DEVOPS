@@ -42,5 +42,11 @@ services:
     depends_on:
       - backend
 
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    networks:
+      - app1-network
+
 networks:
   app1-network:

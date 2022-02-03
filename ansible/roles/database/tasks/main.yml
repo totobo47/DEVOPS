@@ -3,7 +3,7 @@
 
 - name: Run_database
   docker_container:
-    name: httpd
+    name: database
     image: totobo47/postgres
     networks:
       - name: app1-network
