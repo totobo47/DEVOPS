@@ -7,3 +7,4 @@
     image: totobo47/frontend
     networks:
       - name: app1-network
+    pull: true
