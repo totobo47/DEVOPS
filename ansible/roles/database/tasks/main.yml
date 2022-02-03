@@ -1,0 +1,9 @@
+---
+# tasks file for roles/database
+
+- name: Run_database
+  docker_container:
+    name: httpd
+    image: totobo47/postgres
+    networks:
+      - name: app1-network

@@ -1,0 +1,9 @@
+---
+# tasks file for roles/app
+
+- name: Run_backend
+  docker_container:
+    name: httpd
+    image: totobo47/backend
+    networks:
+      - name: app1-network

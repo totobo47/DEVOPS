@@ -1,0 +1,9 @@
+---
+# tasks file for roles/proxy
+
+- name: Run =_HTTPD
+  docker_container:
+    name: httpd
+    image: totobo47/http
+    networks:
+      - name: app1-network
