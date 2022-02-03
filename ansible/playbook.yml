@@ -1,0 +1,7 @@
+- name: first-playbook
+  hosts: all
+  roles:
+    - docker
+  gather_facts: false
+  become: yes
+  tasks:
