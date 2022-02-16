@@ -4,7 +4,7 @@ Elle repose sur 3 grands principes
  - les améliorations
  - le retour des utilisateurs
  - l'apprentissage et les expériences
- - 
+ 
 Cette philosophie est basé sur de l'automatisation, des bonnes pratiques et du code ("Eveything as code": pipeline & deployment, environments, orchestration, infrastructure)
 
 ## Problématique
@@ -27,6 +27,37 @@ Pour créer une container, on doit commencer avec une image de base appropriée 
 | Je gère maintenant mon runtime| Je fais en sorte que l’infra marche|
 | Je m’assure que tout est testé| Je mets en place et maintient le socle qui permet de tout orchestrer|
 | Je suis responsable que le code marche |  |
+
+## Git
+Git est un VCS (Version Control System), un système pour gérer les différentes versions de fichiers.
+L'algorithme utilisé pour le checksum est le SHA-1 (160 bit hashés).
+Git est une solution collaborative, qui propse des commit immutabes (avec un historique) et permet de confilts.
+- Fournie un dossier de travail avec la version actuelle
+- 1 commit = 1 unit of change
+- Snapshots (pas des diffs)
+- dossier .git qui contient les Snapchots, commit ..
+- git diff -> regarde la différence à l'intérieur des fichiers
+- git status -> regarde les fichiers modifiés, ajouté, supprimé
+- git statch -> revnenir à un ancien commmit
+- git log
+
+- git config --global user.name totobo
+- git config --global user.email beaudthomas@gmail.com
+- git init
+- git add -A
+- git commit -m "first commit"
+- git branch -M main
+- git remote add origin https://github.com/totobo47/test.git
+- git push origin main
+
+- .gitignore a remplir pour enlever des fichiers/dossiers d'un commit
+- git checkout develop -> pour aler sur la branche develop
+
+### Branches
+
+## CI CD
+Continuous Integration and Continuous Delivery
+Pour automatiser, éviter de faire des erreurs et les choses plusieurs fois
 
 # TPs
 Finalité du module:
