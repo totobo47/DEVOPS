@@ -106,7 +106,7 @@ Les commandes:
 
 ### 2.2. Multistage build
 
-Un build en plusieurs étapes sert à mieux décomposer ce fameux build. Il va permettre de rendre le Dockerfile plus lisible et plus facile à maintenir. Il va également permettre de sélectionner ce que l'on veut vraiment et de garder à la fin seulement ce qui est nécessaire pour faire tourner notre application. On peut alors utiliser plusieurs instructions "FROM" dans un seul Dockerfile, ce qui nous permettra de build seulement un fichier (une image) et on aura toutes les ressources nécessaires!
+Un build en plusieurs étapes sert à mieux décomposer ce fameux build, l'optimiser. Il va permettre de rendre le Dockerfile plus lisible et plus facile à maintenir. Il va également permettre de sélectionner ce que l'on veut vraiment et de garder à la fin seulement ce qui est nécessaire pour faire tourner notre application. On peut alors utiliser plusieurs instructions "FROM" dans un seul Dockerfile, ce qui nous permettra de build seulement un fichier (une image) et on aura toutes les ressources nécessaires!
 
 On se crée un compte sur le site de spring.io et on génère le projet avec les bonnes propriétés.
 On ajoute le fichier greetingController fourni dans le dossier src\main\java\fr\takima\training\simpleapi\controller
